@@ -1,3 +1,8 @@
+/*
+ Author: Nando Sousa <nandosousafr@gmail.com>
+ This package allows to parse Podcast feeds.
+*/
+
 package podfeed
 
 import (
