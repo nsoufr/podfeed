@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <atom:link href="http://feeds.soundcloud.com/users/soundcloud:users:212089450/sounds.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="http://feeds.soundcloud.com/users/soundcloud:users:212089450/sounds.rss?before=251817720" rel="next" type="application/rss+xml"/>
+    <title>CapyCast</title>
+    <link>http://shipit.resultadosdigitais.com.br</link>
+    <pubDate>Mon, 11 Apr 2016 02:42:09 +0000</pubDate>
+    <lastBuildDate>Mon, 11 Apr 2016 02:42:09 +0000</lastBuildDate>
+    <ttl>60</ttl>
+    <language>pt</language>
+    <copyright>All rights reserved</copyright>
+    <webMaster>feeds@soundcloud.com (SoundCloud Feeds)</webMaster>
+    <description>Perfil do time de produto da Resultados Digitais. Aqui compartilhamos sobre experiências com tecnologia construindo o RDStation.</description>
+    <itunes:subtitle>Perfil do time de produto da Resultados Digitais.…</itunes:subtitle>
+    <itunes:owner>
+      <itunes:name>Ship It</itunes:name>
+      <itunes:email>shipit.rd@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:author>Ship It</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="http://i1.sndcdn.com/avatars-000211243469-j7jvez-original.jpg"/>
+    <image>
+      <url>http://i1.sndcdn.com/avatars-000211243469-j7jvez-original.jpg</url>
+      <title>Ship It</title>
+      <link>http://shipit.resultadosdigitais.com.br</link>
+    </image>
+    <itunes:category text="Technology"/>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/258388007</guid>
+      <title>Capycast #4 Solopreneur, Entrepreneur, Intrapreneur</title>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/shipit-rd/capycast-4-solopreneur-entrepreneur-intrapreneur</link>
+      <itunes:duration>00:43:24</itunes:duration>
+      <itunes:author>Ship It</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>No episódio de hoje o [Jônatas](https://twitter.com/jonatasdp) bate um papo com o [Fabiano Meneguetti](https://twitter.com/fabiano.me).
+
+**Neste podcast:** falamos sobre nossas experiências home office, vida de freelancer e nossa mudança de mindset trabalhando na Resultados Digitais.
+
+Divagamos nos diversos aspectos de trabalhar por conta, tentar buscar um espaço ao sol como freelancer e pequeno empreendedor. Também correlacionamos a importância da saída de casa para estar com um [A Team](http://resultadosdigitais.com.br/blog/culture-code-rd/).
+
+O bate papo veio de encontro o nosso histórico, sendo que eu Jônatas, fui
+sócio da [Invent.to](https://invent.to) e da [Executive](https://executive.com.br) e o Fabiano da [Zee](http://zee.com.br/).
+
+Comentamos sobre a diferença de trabalhar solo, em escala menor, a lá "Exército de um homem só". Os trancos e barrancos do processo de transição de Solopreneur para Intrapreneur.</itunes:summary>
+      <itunes:subtitle>No episódio de hoje o [Jônatas](https://twitter.c…</itunes:subtitle>
+      <description>No episódio de hoje o [Jônatas](https://twitter.com/jonatasdp) bate um papo com o [Fabiano Meneguetti](https://twitter.com/fabiano.me).
+
+**Neste podcast:** falamos sobre nossas experiências home office, vida de freelancer e nossa mudança de mindset trabalhando na Resultados Digitais.
+
+Divagamos nos diversos aspectos de trabalhar por conta, tentar buscar um espaço ao sol como freelancer e pequeno empreendedor. Também correlacionamos a importância da saída de casa para estar com um [A Team](http://resultadosdigitais.com.br/blog/culture-code-rd/).
+
+O bate papo veio de encontro o nosso histórico, sendo que eu Jônatas, fui
+sócio da [Invent.to](https://invent.to) e da [Executive](https://executive.com.br) e o Fabiano da [Zee](http://zee.com.br/).
+
+Comentamos sobre a diferença de trabalhar solo, em escala menor, a lá "Exército de um homem só". Os trancos e barrancos do processo de transição de Solopreneur para Intrapreneur.</description>
+      <enclosure type="audio/mpeg" url="http://feeds.soundcloud.com/stream/258388007-shipit-rd-capycast-4-solopreneur-entrepreneur-intrapreneur.mp3" length="0"/>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000157500330-xdws90-original.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/257186767</guid>
+      <title>Capycast #3 Mongo Migration (épico)</title>
+      <pubDate>Mon, 04 Apr 2016 02:09:40 +0000</pubDate>
+      <link>https://soundcloud.com/shipit-rd/capycast-3-mongo-migration-epico</link>
+      <itunes:duration>00:27:21</itunes:duration>
+      <itunes:author>Ship It</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>Nesse episódio falamos sobre uma migração no mongodb de 1.3 bilhões de documentos.
+
+Veja mais em http://shipit.resultadosdigitais.com.br
+
+Subscribe via iTunes: https://itunes.apple.com/br/podcast/capycast/id1093562535?mt=2</itunes:summary>
+      <itunes:subtitle>Nesse episódio falamos sobre uma migração no mong…</itunes:subtitle>
+      <description>Nesse episódio falamos sobre uma migração no mongodb de 1.3 bilhões de documentos.
+
+Veja mais em http://shipit.resultadosdigitais.com.br
+
+Subscribe via iTunes: https://itunes.apple.com/br/podcast/capycast/id1093562535?mt=2</description>
+      <enclosure type="audio/mpeg" url="http://feeds.soundcloud.com/stream/257186767-shipit-rd-capycast-3-mongo-migration-epico.mp3" length="0"/>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000156318106-ixl4ea-original.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/255487243</guid>
+      <title>Capycast #2 GoLang</title>
+      <pubDate>Mon, 28 Mar 2016 00:14:25 +0000</pubDate>
+      <link>https://soundcloud.com/shipit-rd/capycast-2-golang</link>
+      <itunes:duration>00:25:04</itunes:duration>
+      <itunes:author>Ship It</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>No podcast #2 conversamos sobre a linguagem de programação Go (Go Lang).
+
+Com a participação dos RDevs: Nando Sousa (@nandosousafr) e Paulo Casaretto (@pcasaretto).
+
+Facilitado por Jônatas Davi Paganini (@jonatasdp).</itunes:summary>
+      <itunes:subtitle>No podcast #2 conversamos sobre a linguagem de pr…</itunes:subtitle>
+      <description>No podcast #2 conversamos sobre a linguagem de programação Go (Go Lang).
+
+Com a participação dos RDevs: Nando Sousa (@nandosousafr) e Paulo Casaretto (@pcasaretto).
+
+Facilitado por Jônatas Davi Paganini (@jonatasdp).</description>
+      <enclosure type="audio/mpeg" url="http://feeds.soundcloud.com/stream/255487243-shipit-rd-capycast-2-golang.mp3" length="0"/>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000154527193-jtlskz-original.jpg"/>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/251817720</guid>
+      <title>CapyCast #1 Docker</title>
+      <pubDate>Mon, 14 Mar 2016 14:50:20 +0000</pubDate>
+      <link>https://soundcloud.com/shipit-rd/capycast-1-docker</link>
+      <itunes:duration>00:32:04</itunes:duration>
+      <itunes:author>Ship It</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>Nesse podcast falamos sobre o início da dockerização do RDStation.
+
+Participação especial do Hugo Luchesi e Daniel Oliveira.
+
+Facilitador: Jônatas Davi Paganini</itunes:summary>
+      <itunes:subtitle>Nesse podcast falamos sobre o início da dockeriza…</itunes:subtitle>
+      <description>Nesse podcast falamos sobre o início da dockerização do RDStation.
+
+Participação especial do Hugo Luchesi e Daniel Oliveira.
+
+Facilitador: Jônatas Davi Paganini</description>
+      <enclosure type="audio/mpeg" url="http://feeds.soundcloud.com/stream/251817720-shipit-rd-capycast-1-docker.mp3" length="0"/>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000150870143-4eei1u-original.jpg"/>
+    </item>
+  </channel>
+</rss>
