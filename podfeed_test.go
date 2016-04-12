@@ -2,6 +2,8 @@ package podfeed
 
 import (
 	"io/ioutil"
+	"net/http"
+	"net/http/httptest"
 	"testing"
 )
 
@@ -49,5 +51,28 @@ func TestParse(t *testing.T) {
 		if assert.in != assert.out {
 			t.Errorf("got %q, want %q", assert.in, assert.out)
 		}
+	}
+}
+
+func TestFetch(t *testing.T) {
+	blob, err := ioutil.ReadFile("./test/podcast.rss")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write(blob)
+	})
+
+	ts := httptest.NewServer(handler)
+	defer ts.Close()
+
+	pod, err := Fetch(ts.URL)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if pod.Title != "CapyCast" {
+		t.Errorf("expected %s, got %s", pod.Title, "CapyCast")
 	}
 }
