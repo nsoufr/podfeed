@@ -26,6 +26,24 @@ type Category struct {
 	Text string `xml:"text,attr"`
 }
 
+type Enclosure struct {
+	Type string `xml:"type,attr"`
+	Url  string `xml:"url,attr"`
+}
+
+type Item struct {
+	Title       string    `xml:"title"`
+	PubDate     string    `xml:"pubDate"`
+	Link        string    `xml:"link"`
+	Duration    string    `xml:"duration"`
+	Author      string    `xml:"author"`
+	Summary     string    `xml:"summary"`
+	Subtitle    string    `xml:"subtitle"`
+	Description string    `xml:"description"`
+	Enclosure   Enclosure `xml:"enclosure"`
+	Image       Image     `xml:"image"`
+}
+
 type Podcast struct {
 	Title       string   `xml:"channel>title"`
 	Subtitle    string   `xml:"channel>subtitle"`
@@ -36,4 +54,5 @@ type Podcast struct {
 	Image       Image    `xml:"channel>image"`
 	Owner       Owner    `xml:"channel>owner"`
 	Category    Category `xml:"channel>category"`
+	Items       []Item   `xml:"channel>item"`
 }

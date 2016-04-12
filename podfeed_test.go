@@ -32,6 +32,17 @@ func TestParse(t *testing.T) {
 		{pod.Owner.Name, "Ship It"},
 		{pod.Owner.Email, "shipit.rd@gmail.com"},
 		{pod.Category.Text, "Technology"},
+		{pod.Items[0].Title, "Capycast #4 Solopreneur, Entrepreneur, Intrapreneur"},
+		{pod.Items[0].PubDate, "Sat, 09 Apr 2016 00:00:00 +0000"},
+		{pod.Items[0].Link, "https://soundcloud.com/shipit-rd/capycast-4-solopreneur-entrepreneur-intrapreneur"},
+		{pod.Items[0].Duration, "00:43:24"},
+		{pod.Items[0].Author, "Ship It"},
+		{pod.Items[0].Summary, "itunes:summary tag"},
+		{pod.Items[0].Subtitle, "subtitle"},
+		{pod.Items[0].Description, "description"},
+		{pod.Items[0].Enclosure.Type, "audio/mpeg"},
+		{pod.Items[0].Enclosure.Url, "http://feeds.soundcloud.com/stream/258388007-shipit-rd-capycast-4-solopreneur-entrepreneur-intrapreneur.mp3"},
+		{pod.Items[0].Image.Href, "http://i1.sndcdn.com/artworks-000157500330-xdws90-original.jpg"},
 	}
 
 	for _, assert := range asserts {

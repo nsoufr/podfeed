@@ -33,27 +33,9 @@
       <itunes:duration>00:43:24</itunes:duration>
       <itunes:author>Ship It</itunes:author>
       <itunes:explicit>no</itunes:explicit>
-      <itunes:summary>No episódio de hoje o [Jônatas](https://twitter.com/jonatasdp) bate um papo com o [Fabiano Meneguetti](https://twitter.com/fabiano.me).
-
-**Neste podcast:** falamos sobre nossas experiências home office, vida de freelancer e nossa mudança de mindset trabalhando na Resultados Digitais.
-
-Divagamos nos diversos aspectos de trabalhar por conta, tentar buscar um espaço ao sol como freelancer e pequeno empreendedor. Também correlacionamos a importância da saída de casa para estar com um [A Team](http://resultadosdigitais.com.br/blog/culture-code-rd/).
-
-O bate papo veio de encontro o nosso histórico, sendo que eu Jônatas, fui
-sócio da [Invent.to](https://invent.to) e da [Executive](https://executive.com.br) e o Fabiano da [Zee](http://zee.com.br/).
-
-Comentamos sobre a diferença de trabalhar solo, em escala menor, a lá "Exército de um homem só". Os trancos e barrancos do processo de transição de Solopreneur para Intrapreneur.</itunes:summary>
-      <itunes:subtitle>No episódio de hoje o [Jônatas](https://twitter.c…</itunes:subtitle>
-      <description>No episódio de hoje o [Jônatas](https://twitter.com/jonatasdp) bate um papo com o [Fabiano Meneguetti](https://twitter.com/fabiano.me).
-
-**Neste podcast:** falamos sobre nossas experiências home office, vida de freelancer e nossa mudança de mindset trabalhando na Resultados Digitais.
-
-Divagamos nos diversos aspectos de trabalhar por conta, tentar buscar um espaço ao sol como freelancer e pequeno empreendedor. Também correlacionamos a importância da saída de casa para estar com um [A Team](http://resultadosdigitais.com.br/blog/culture-code-rd/).
-
-O bate papo veio de encontro o nosso histórico, sendo que eu Jônatas, fui
-sócio da [Invent.to](https://invent.to) e da [Executive](https://executive.com.br) e o Fabiano da [Zee](http://zee.com.br/).
-
-Comentamos sobre a diferença de trabalhar solo, em escala menor, a lá "Exército de um homem só". Os trancos e barrancos do processo de transição de Solopreneur para Intrapreneur.</description>
+      <itunes:summary>itunes:summary tag</itunes:summary>
+      <itunes:subtitle>subtitle</itunes:subtitle>
+      <description>description</description>
       <enclosure type="audio/mpeg" url="http://feeds.soundcloud.com/stream/258388007-shipit-rd-capycast-4-solopreneur-entrepreneur-intrapreneur.mp3" length="0"/>
       <itunes:image href="http://i1.sndcdn.com/artworks-000157500330-xdws90-original.jpg"/>
     </item>
