@@ -26,6 +26,10 @@ func (t *Time) UnmarshalText(data []byte) (err error) {
 	return
 }
 
+func (t Time) MarshalText() ([]byte, error) {
+	return []byte(t.Value.String()), nil
+}
+
 func Parse(blob []byte) (pd Podcast, err error) {
 	err = xml.Unmarshal(blob, &pd)
 	if err != nil {
