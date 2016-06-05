@@ -6,7 +6,6 @@ import (
 	"net/http/httptest"
 	"reflect"
 	"testing"
-	"time"
 )
 
 func TestParse(t *testing.T) {
@@ -34,7 +33,7 @@ func TestParse(t *testing.T) {
 		{pod.Owner.Email, "shipit.rd@gmail.com"},
 		{pod.Category.Text, "Technology"},
 		{pod.Items[0].Title, "Capycast #4 Solopreneur, Entrepreneur, Intrapreneur"},
-		{pod.Items[0].PubDate, "Sat, 09 Apr 2016 00:00:00 +0000"},
+		{pod.Items[0].PubDate.Value.String(), "2016-04-09 00:00:00 +0000 +0000"},
 		{pod.Items[0].Link, "https://soundcloud.com/shipit-rd/capycast-4-solopreneur-entrepreneur-intrapreneur"},
 		{pod.Items[0].Duration, "00:43:24"},
 		{pod.Items[0].Author, "Ship It"},
@@ -80,9 +79,9 @@ func TestPodcast_ReleasesByWeekday(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	want := map[time.Weekday]int{
-		6: 1, // sunday has 3 occurrences
-		1: 3, // monday has 1 occurrence
+	want := map[string]int{
+		"Saturday": 1,
+		"Monday":   3,
 	}
 
 	if !reflect.DeepEqual(got, want) {
