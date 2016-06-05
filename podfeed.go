@@ -50,8 +50,8 @@ type Podcast struct {
 	Items       []Item   `xml:"channel>item"`
 }
 
-func (p Podcast) ReleasesByWeekday() (map[time.Weekday]int, error) {
-	res := map[time.Weekday]int{}
+func (p Podcast) ReleasesByWeekday() (map[string]int, error) {
+	res := map[string]int{}
 
 	for _, episode := range p.Items {
 		t, err := time.Parse(time.RFC1123Z, episode.PubDate)
@@ -59,7 +59,7 @@ func (p Podcast) ReleasesByWeekday() (map[time.Weekday]int, error) {
 			return nil, err
 		}
 
-		res[t.Weekday()]++
+		res[t.Weekday().String()]++
 	}
 
 	return res, nil
