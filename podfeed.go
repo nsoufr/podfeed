@@ -12,6 +12,31 @@ import (
 	"time"
 )
 
+func Parse(blob []byte) (pd Podcast, err error) {
+	err = xml.Unmarshal(blob, &pd)
+	if err != nil {
+		return
+	}
+
+	return
+}
+
+func Fetch(url string) (pd Podcast, err error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return
+	}
+
+	defer res.Body.Close()
+
+	buff, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return
+	}
+
+	return Parse(buff)
+}
+
 type Podcast struct {
 	Title       string   `xml:"channel>title"`
 	Subtitle    string   `xml:"channel>subtitle"`
@@ -71,29 +96,4 @@ type Category struct {
 type Enclosure struct {
 	Type string `xml:"type,attr"`
 	Url  string `xml:"url,attr"`
-}
-
-func Parse(blob []byte) (pd Podcast, err error) {
-	err = xml.Unmarshal(blob, &pd)
-	if err != nil {
-		return
-	}
-
-	return
-}
-
-func Fetch(url string) (pd Podcast, err error) {
-	res, err := http.Get(url)
-	if err != nil {
-		return
-	}
-
-	defer res.Body.Close()
-
-	buff, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return
-	}
-
-	return Parse(buff)
 }
