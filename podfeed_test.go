@@ -4,14 +4,13 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"reflect"
 	"testing"
+	"time"
 )
 
 func TestParse(t *testing.T) {
-	blob, err := ioutil.ReadFile("./fixtures/podcast.rss")
-	if err != nil {
-		t.Fatal(err)
-	}
+	blob := loadFixture()
 
 	pod, err := Parse(blob)
 	if err != nil {
@@ -55,10 +54,7 @@ func TestParse(t *testing.T) {
 }
 
 func TestFetch(t *testing.T) {
-	blob, err := ioutil.ReadFile("./test/podcast.rss")
-	if err != nil {
-		t.Fatal(err)
-	}
+	blob := loadFixture()
 
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Write(blob)
@@ -75,4 +71,32 @@ func TestFetch(t *testing.T) {
 	if pod.Title != "CapyCast" {
 		t.Errorf("expected %s, got %s", pod.Title, "CapyCast")
 	}
+}
+
+func TestPodcast_ReleasesByWeekday(t *testing.T) {
+	podcast := loadPodcast()
+	got, err := podcast.ReleasesByWeekday()
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	want := map[time.Weekday]int{
+		6: 1, // sunday has 3 occurrences
+		1: 3, // monday has 1 occurrence
+	}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("got %+v, want %+v", got, want)
+	}
+}
+
+func loadFixture() []byte {
+	blob, _ := ioutil.ReadFile("./fixtures/podcast.rss")
+	return blob
+}
+
+func loadPodcast() Podcast {
+	buff := loadFixture()
+	pc, _ := Parse(buff)
+	return pc
 }

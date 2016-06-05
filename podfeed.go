@@ -9,7 +9,69 @@ import (
 	"encoding/xml"
 	"io/ioutil"
 	"net/http"
+	"time"
 )
+
+type Podcast struct {
+	Title       string   `xml:"channel>title"`
+	Subtitle    string   `xml:"channel>subtitle"`
+	Description string   `xml:"channel>description"`
+	Link        string   `xml:"channel>link"`
+	Language    string   `xml:"channel>language"`
+	Author      string   `xml:"channel>author"`
+	Image       Image    `xml:"channel>image"`
+	Owner       Owner    `xml:"channel>owner"`
+	Category    Category `xml:"channel>category"`
+	Items       []Item   `xml:"channel>item"`
+}
+
+func (p Podcast) ReleasesByWeekday() (map[time.Weekday]int, error) {
+	res := map[time.Weekday]int{}
+
+	for _, episode := range p.Items {
+		t, err := time.Parse(time.RFC1123Z, episode.PubDate)
+		if err != nil {
+			return nil, err
+		}
+
+		res[t.Weekday()]++
+	}
+
+	return res, nil
+}
+
+type Item struct {
+	Title       string    `xml:"title"`
+	PubDate     string    `xml:"pubDate"`
+	Link        string    `xml:"link"`
+	Duration    string    `xml:"duration"`
+	Author      string    `xml:"author"`
+	Summary     string    `xml:"summary"`
+	Subtitle    string    `xml:"subtitle"`
+	Description string    `xml:"description"`
+	Enclosure   Enclosure `xml:"enclosure"`
+	Image       Image     `xml:"image"`
+}
+
+type Image struct {
+	Href  string `xml:"href,attr"`
+	Url   string `xml:"url"`
+	Title string `xml:"title"`
+}
+
+type Owner struct {
+	Name  string `xml:"name"`
+	Email string `xml:"email"`
+}
+
+type Category struct {
+	Text string `xml:"text,attr"`
+}
+
+type Enclosure struct {
+	Type string `xml:"type,attr"`
+	Url  string `xml:"url,attr"`
+}
 
 func Parse(blob []byte) (pd Podcast, err error) {
 	err = xml.Unmarshal(blob, &pd)
@@ -34,50 +96,4 @@ func Fetch(url string) (pd Podcast, err error) {
 	}
 
 	return Parse(buff)
-}
-
-type Image struct {
-	Href  string `xml:"href,attr"`
-	Url   string `xml:"url"`
-	Title string `xml:"title"`
-}
-
-type Owner struct {
-	Name  string `xml:"name"`
-	Email string `xml:"email"`
-}
-
-type Category struct {
-	Text string `xml:"text,attr"`
-}
-
-type Enclosure struct {
-	Type string `xml:"type,attr"`
-	Url  string `xml:"url,attr"`
-}
-
-type Item struct {
-	Title       string    `xml:"title"`
-	PubDate     string    `xml:"pubDate"`
-	Link        string    `xml:"link"`
-	Duration    string    `xml:"duration"`
-	Author      string    `xml:"author"`
-	Summary     string    `xml:"summary"`
-	Subtitle    string    `xml:"subtitle"`
-	Description string    `xml:"description"`
-	Enclosure   Enclosure `xml:"enclosure"`
-	Image       Image     `xml:"image"`
-}
-
-type Podcast struct {
-	Title       string   `xml:"channel>title"`
-	Subtitle    string   `xml:"channel>subtitle"`
-	Description string   `xml:"channel>description"`
-	Link        string   `xml:"channel>link"`
-	Language    string   `xml:"channel>language"`
-	Author      string   `xml:"channel>author"`
-	Image       Image    `xml:"channel>image"`
-	Owner       Owner    `xml:"channel>owner"`
-	Category    Category `xml:"channel>category"`
-	Items       []Item   `xml:"channel>item"`
 }
