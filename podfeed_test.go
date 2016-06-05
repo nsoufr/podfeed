@@ -8,7 +8,7 @@ import (
 )
 
 func TestParse(t *testing.T) {
-	blob, err := ioutil.ReadFile("./test/podcast.rss")
+	blob, err := ioutil.ReadFile("./fixtures/podcast.rss")
 	if err != nil {
 		t.Fatal(err)
 	}
