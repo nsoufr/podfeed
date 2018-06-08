@@ -19,9 +19,11 @@ type Time struct {
 func (t *Time) UnmarshalText(data []byte) (err error) {
 	tm, err := time.Parse(time.RFC1123Z, string(data))
 	if err != nil {
-		return
+		tm, err = time.Parse(time.RFC1123, string(data))
+		if err != nil {
+			return
+		}
 	}
-
 	*t = Time{tm}
 	return
 }
