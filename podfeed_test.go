@@ -1,6 +1,7 @@
 package podfeed
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -42,6 +43,7 @@ func TestParse(t *testing.T) {
 		{pod.Items[0].Description, "description"},
 		{pod.Items[0].Enclosure.Type, "audio/mpeg"},
 		{pod.Items[0].Enclosure.Url, "http://feeds.soundcloud.com/stream/258388007-shipit-rd-capycast-4-solopreneur-entrepreneur-intrapreneur.mp3"},
+		{fmt.Sprintf("%v", pod.Items[3].Enclosure.Length), "292585861"},
 		{pod.Items[0].Image.Href, "http://i1.sndcdn.com/artworks-000157500330-xdws90-original.jpg"},
 	}
 
