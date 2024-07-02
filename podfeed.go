@@ -6,8 +6,9 @@
 package podfeed
 
 import (
+	"context"
 	"encoding/xml"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
 )
@@ -41,15 +42,21 @@ func Parse(blob []byte) (pd Podcast, err error) {
 	return
 }
 
-func Fetch(url string) (pd Podcast, err error) {
-	res, err := http.Get(url)
+func Fetch(ctx context.Context, url string) (pd Podcast, err error) {
+	client := http.Client{}
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return
+	}
+
+	res, err := client.Do(req)
 	if err != nil {
 		return
 	}
 
 	defer res.Body.Close()
 
-	buff, err := ioutil.ReadAll(res.Body)
+	buff, err := io.ReadAll(res.Body)
 	if err != nil {
 		return
 	}

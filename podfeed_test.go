@@ -1,10 +1,11 @@
 package podfeed
 
 import (
+	"context"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"reflect"
 	"testing"
 )
@@ -56,6 +57,7 @@ func TestParse(t *testing.T) {
 
 func TestFetch(t *testing.T) {
 	blob := loadFixture()
+	ctx := context.Background()
 
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Write(blob)
@@ -64,7 +66,7 @@ func TestFetch(t *testing.T) {
 	ts := httptest.NewServer(handler)
 	defer ts.Close()
 
-	pod, err := Fetch(ts.URL)
+	pod, err := Fetch(ctx, ts.URL)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -92,7 +94,7 @@ func TestPodcast_ReleasesByWeekday(t *testing.T) {
 }
 
 func loadFixture() []byte {
-	blob, _ := ioutil.ReadFile("./fixtures/podcast.rss")
+	blob, _ := os.ReadFile("./fixtures/podcast.rss")
 	return blob
 }
 
