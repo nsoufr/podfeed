@@ -16,7 +16,10 @@ import (
 
 func main() {
   ctx := context.Background()
-  podcast, err := podfeed.Fetch(ctx, "http://feeds.soundcloud.com/users/soundcloud:users:212089450/sounds.rss")
+  podcast, err := podfeed.Fetch(
+    ctx,
+    "http://feeds.soundcloud.com/users/soundcloud:users:212089450/sounds.rss"
+  )
   if err != nil {
     log.Fatal(err)
   }
