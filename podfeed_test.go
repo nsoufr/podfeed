@@ -35,7 +35,7 @@ func TestParse(t *testing.T) {
 		{pod.Owner.Email, "shipit.rd@gmail.com"},
 		{pod.Category.Text, "Technology"},
 		{pod.Items[0].Title, "Capycast #4 Solopreneur, Entrepreneur, Intrapreneur"},
-		{pod.Items[0].PubDate.Value.String(), "2016-04-09 00:00:00 +0000 +0000"},
+		{pod.Items[0].PubDate.Value.UTC().String(), "2016-04-09 00:00:00 +0000 UTC"},
 		{pod.Items[0].Link, "https://soundcloud.com/shipit-rd/capycast-4-solopreneur-entrepreneur-intrapreneur"},
 		{pod.Items[0].Duration, "00:43:24"},
 		{pod.Items[0].Author, "Ship It"},
