@@ -118,5 +118,5 @@ type Category struct {
 type Enclosure struct {
 	Type   string `xml:"type,attr"`
 	Url    string `xml:"url,attr"`
-	Length uint64 `xml:"length,attr"`
+	Length string `xml:"length,attr"`
 }
